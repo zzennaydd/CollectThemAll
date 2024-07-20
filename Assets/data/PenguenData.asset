@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1ede53a7fa6993498f52ca25444db18, type: 3}
-  m_Name: AnimalData
+  m_Name: PenguenData
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: cdba12dd5748ac24293563ed286ba548, type: 3}
+  sprite: {fileID: 21300000, guid: d5c2378f93c68d949834f09ac278f912, type: 3}
