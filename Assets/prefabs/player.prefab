@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.68, y: -1.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3036905641948699226}
@@ -52,6 +52,20 @@ MonoBehaviour:
   speed: 20
   health: 10
   rigidbody2D: {fileID: 5977053552687845792}
+  scoreManager: {fileID: 0}
+  enemydata: {fileID: 0}
+  chickdata: {fileID: 0}
+  parrotdata: {fileID: 0}
+  duckdata: {fileID: 0}
+  rabbitdata: {fileID: 0}
+  penguindata: {fileID: 0}
+  chickicon: {fileID: 0}
+  parroticon: {fileID: 0}
+  duckicon: {fileID: 0}
+  rabbiticon: {fileID: 0}
+  penguinicon: {fileID: 0}
+  x: 0
+  isGameEnd: 0
 --- !u!61 &2824786234238697033
 BoxCollider2D:
   m_ObjectHideFlags: 0
