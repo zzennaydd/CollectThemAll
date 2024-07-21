@@ -11,6 +11,7 @@ TagManager:
   - penguin
   - duck
   - rabbit
+  - health
   layers:
   - Default
   - TransparentFX

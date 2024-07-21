@@ -2,11 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class HealthDisplay : MonoBehaviour
+{
+    public Text healthText; // Sağlık metnini gösterecek Text UI öğesi
+    public Player player;   // Oyuncu script referansı
+
+    void Update()
+    {
+        // Oyuncunun mevcut sağlığını metin öğesinde göster
+        healthText.text = player.health.ToString();
+    }
+}
+
 
 public class Player : AnimalHolder
 {
     public float speed = 0.5f;
     public float health = 5;
+    public float maxHealth = 5; // Maksimum sağlık
     public Rigidbody2D rigidbody2D;
     public ScoreManager scoreManager;
     public AnimalData enemydata;
@@ -23,12 +39,11 @@ public class Player : AnimalHolder
     public int x;
 
     public bool isGameEnd = false;
-    
-    // Update is called once per frame
+
     void FixedUpdate()
     {
-        float horizontalMove = Input.GetAxis("Horizontal") * 0.5f; // Hareket miktarını azalt
-        float verticalMove = Input.GetAxis("Vertical") * 0.5f;     // Hareket miktarını azalt
+        float horizontalMove = Input.GetAxis("Horizontal") * 0.5f;
+        float verticalMove = Input.GetAxis("Vertical") * 0.5f;
 
         Vector3 moveDirection = new Vector2(horizontalMove, verticalMove);
         moveDirection.Normalize();
@@ -40,10 +55,9 @@ public class Player : AnimalHolder
         transform.position = newPosition;
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.CompareTag("enemy"))
         {
             if (!isGameEnd)
             {
@@ -51,7 +65,6 @@ public class Player : AnimalHolder
                 if (health <= 0)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
                 }
             }
             else
@@ -59,19 +72,16 @@ public class Player : AnimalHolder
                 Destroy(collision.gameObject);
                 ChangeAnimal(enemydata);
             }
-          
-            
         }
-
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.gameObject.CompareTag("chick"))
         {
             scoreManager.chickCount++;
             scoreManager.AdjustOtherScores("chick");
-            if (scoreManager.chickCount >= 10 )
+            if (scoreManager.chickCount >= 10)
             {
                 scoreManager.chickCount = -10;
                 scoreManager.chickSpawner.SetActive(false);
@@ -101,7 +111,6 @@ public class Player : AnimalHolder
                     isGameEnd = true;
                 }
             }
-            
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("rabbit"))
@@ -158,7 +167,5 @@ public class Player : AnimalHolder
             }
             Destroy(other.gameObject);
         }
-
-
     }
 }
