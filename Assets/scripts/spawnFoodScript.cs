@@ -6,7 +6,7 @@ public class spawnFoodScript : MonoBehaviour
 {
 
     public GameObject food;
-    public float spawnCountdown = 10f;
+    public float spawnCountdown = 1f;
     public float timer;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class spawnFoodScript : MonoBehaviour
         
        if(timer <= 0f)
             {
-            Vector2 randomPosition = new Vector2(Random.Range(-10, 10), Random.Range(-5, 5));
+            Vector2 randomPosition = new Vector2(Random.Range(-7.5f, 7.5f), Random.Range(-4, 2.2f));
             Instantiate(food, randomPosition, Quaternion.identity);
             timer = spawnCountdown;
             }
