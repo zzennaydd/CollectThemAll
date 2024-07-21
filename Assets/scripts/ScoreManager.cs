@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
-    public TMP_Text scoreText;
+    public TextMeshProUGUI scoreText;
     public static int chickCount;
-    public int parrotCount;
+    public static int parrotCount;
     
     public void CollectFood()
     {
@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(chickCount > 0)
         {
-            chickCount++;
+            chickCount--;
             scoreText.text = "Chick:" + chickCount.ToString();
         }
     }

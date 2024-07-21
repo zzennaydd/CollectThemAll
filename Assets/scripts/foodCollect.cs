@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class foodCollect : AnimalHolder
 {
+    public ScoreManager scoreManager;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "player")
+        if (other.gameObject.tag == "player")
         {
-            ScoreManager.chickCount += 1;
-            Destroy(gameObject);
+            scoreManager.chickCount += 1;
+            Destroy(this.gameObject);
         }
     }
 }

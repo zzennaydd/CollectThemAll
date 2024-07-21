@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : AnimalHolder
 {
     public float speed;
     public float health = 5;
     public Rigidbody2D rigidbody2D;
+    public ScoreManager scoreManager;
+   
 
     // Update is called once per frame
     void FixedUpdate()
@@ -29,16 +32,24 @@ public class Player : AnimalHolder
         if (other.gameObject.tag == "enemy")
         {
             health -= 1;
-            if(health == 0)
+            if(health <= 0)
             {
-                Destroy(this.gameObject);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
         }
-       
         if(other.gameObject.tag == "chick")
         {
-            ScoreManager.chickCount += 1;
+            Destroy(other.gameObject);
+            scoreManager.CollectFood();
+            
         }
+        if(other.gameObject.tag == "parrot")
+        {
+            Destroy(other.gameObject);
+            scoreManager.DecreaseScore();
+        }
+       
+
     }
 }

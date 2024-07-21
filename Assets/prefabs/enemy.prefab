@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547225773b5399f45b3f81c6c4ff053e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal: {fileID: 0}
+  animal: {fileID: 1076174245532078322}
   defaultAnimalData: {fileID: 11400000, guid: d76abc557ffe70942be79e8f8da975b8, type: 2}
   visionRange: 5
   speed: 10
@@ -183,6 +183,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e56adba067c494eb6a9203622afb5d, type: 3}
+--- !u!114 &1076174245532078322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9073853678030682238, guid: e8e56adba067c494eb6a9203622afb5d, type: 3}
+  m_PrefabInstance: {fileID: 8287638292506011788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d9188c9facca646b8571eefd1b6636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6103054772043417709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2860345298161000673, guid: e8e56adba067c494eb6a9203622afb5d, type: 3}
