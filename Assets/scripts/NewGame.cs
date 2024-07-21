@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class Win : MonoBehaviour
 {
-    public void playGame()
+    public void NewGameButton()
     {
         SceneManager.LoadScene("Game");
     }
-    public void HowToPlay()
+    public void QuitButton()
     {
-        SceneManager.LoadScene("HowToPlayMenu");
+        Application.Quit();
     }
 }

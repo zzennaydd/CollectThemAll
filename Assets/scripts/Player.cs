@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : AnimalHolder
 {
     public float speed;
-    public float health = 5;
+    public float health = 20;
     public Rigidbody2D rigidbody2D;
     public ScoreManager scoreManager;
     public AnimalData enemydata;
