@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6880158745762108433}
   - component: {fileID: 6809995206251090688}
   m_Layer: 0
-  m_Name: food
+  m_Name: rabbit
   m_TagString: chick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animal: {fileID: 6616568442844706690}
-  defaultAnimalData: {fileID: 11400000, guid: 7ef993eab58e98b4f90323b426f6a9b9, type: 2}
+  defaultAnimalData: {fileID: 11400000, guid: 649705e84fe1d62458f3915f63be5868, type: 2}
 --- !u!50 &6809995206251090688
 Rigidbody2D:
   serializedVersion: 4
