@@ -9,8 +9,21 @@ public class Player : AnimalHolder
     public float health = 5;
     public Rigidbody2D rigidbody2D;
     public ScoreManager scoreManager;
-   
+    public AnimalData enemydata;
+    public AnimalData chickdata;
+    public AnimalData parrotdata;
+    public AnimalData duckdata;
+    public AnimalData rabbitdata;
+    public AnimalData penguindata;
+    public GameObject chickicon;
+    public GameObject parroticon;
+    public GameObject duckicon;
+    public GameObject rabbiticon;
+    public GameObject penguinicon;
+    public int x;
 
+    public bool isGameEnd = false;
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -32,11 +45,19 @@ public class Player : AnimalHolder
     {
         if (collision.gameObject.tag == "enemy")
         {
-            health -= 1;
-            if (health <= 0)
+            if (!isGameEnd)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                health -= 1;
+                if (health <= 0)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+                }
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+                ChangeAnimal(enemydata);
             }
           
             
@@ -50,30 +71,91 @@ public class Player : AnimalHolder
         {
             scoreManager.chickCount++;
             scoreManager.AdjustOtherScores("chick");
+            if (scoreManager.chickCount >= 10 )
+            {
+                scoreManager.chickCount = -10;
+                scoreManager.chickSpawner.SetActive(false);
+                ChangeAnimal(chickdata);
+                chickicon.SetActive(false);
+                x++;
+                if (x == 5)
+                {
+                    isGameEnd = true;
+                }
+            }
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("parrot"))
         {
             scoreManager.parrotCount++;
             scoreManager.AdjustOtherScores("parrot");
+            if (scoreManager.parrotCount >= 10)
+            {
+                scoreManager.parrotCount = -10;
+                scoreManager.parrotSpawner.SetActive(false);
+                ChangeAnimal(parrotdata);
+                parroticon.SetActive(false);
+                x++;
+                if (x == 5)
+                {
+                    isGameEnd = true;
+                }
+            }
+            
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("rabbit"))
         {
             scoreManager.rabbitCount++;
             scoreManager.AdjustOtherScores("rabbit");
+            if (scoreManager.rabbitCount >= 10)
+            {
+                scoreManager.rabbitCount = -10;
+                scoreManager.rabbitSpawner.SetActive(false);
+                ChangeAnimal(rabbitdata);
+                rabbiticon.SetActive(false);
+                x++;
+                if (x == 5)
+                {
+                    isGameEnd = true;
+                }
+            }
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("duck"))
         {
             scoreManager.duckCount++;
             scoreManager.AdjustOtherScores("duck");
+            if (scoreManager.duckCount >= 10)
+            {
+                scoreManager.duckCount = -10;
+                scoreManager.duckSpawner.SetActive(false);
+                ChangeAnimal(duckdata);
+                duckicon.SetActive(false);
+                x++;
+                if (x == 5)
+                {
+                    isGameEnd = true;
+                }
+            }
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("penguin"))
         {
             scoreManager.penguinCount++;
             scoreManager.AdjustOtherScores("penguin");
+            if (scoreManager.penguinCount >= 10)
+            {
+                scoreManager.penguinCount = -10;
+                scoreManager.penguinSpawner.SetActive(false);
+                ChangeAnimal(penguindata);
+                penguinicon.SetActive(false);
+                x++;
+                if (x == 5)
+                {
+                    isGameEnd = true;
+                }
+            }
             Destroy(other.gameObject);
         }
 

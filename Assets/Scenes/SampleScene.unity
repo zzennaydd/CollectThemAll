@@ -832,6 +832,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+--- !u!1 &785473777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+  m_PrefabInstance: {fileID: 785473776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &821028331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,13 +1255,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+--- !u!1 &940363968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+  m_PrefabInstance: {fileID: 940363967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &986395548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1415,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+--- !u!1 &1483319456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+  m_PrefabInstance: {fileID: 1483319455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1592522935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,6 +1481,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+--- !u!1 &1592522936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+  m_PrefabInstance: {fileID: 1592522935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1648593789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1767,11 @@ MonoBehaviour:
   penguinCount: 0
   rabbitCount: 0
   duckCount: 0
+  chickSpawner: {fileID: 1937553148}
+  duckSpawner: {fileID: 785473777}
+  rabbitSpawner: {fileID: 940363968}
+  parrotSpawner: {fileID: 1483319456}
+  penguinSpawner: {fileID: 1592522936}
 --- !u!4 &1928653738
 Transform:
   m_ObjectHideFlags: 0
@@ -1819,6 +1844,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+--- !u!1 &1937553148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5768412791349757956, guid: 02d9dd04ac321c84b93917aa72441edf, type: 3}
+  m_PrefabInstance: {fileID: 1937553147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056003391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,6 +2294,50 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: duckdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f925647abb6a0349b6c6cf2c9c0f9d8, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: duckicon
+      value: 
+      objectReference: {fileID: 517678602}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: chickdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ef993eab58e98b4f90323b426f6a9b9, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: chickicon
+      value: 
+      objectReference: {fileID: 677548970}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: enemydata
+      value: 
+      objectReference: {fileID: 11400000, guid: d76abc557ffe70942be79e8f8da975b8, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: parrotdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 371a89d5b66a6a44a803676b8f648df0, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: parroticon
+      value: 
+      objectReference: {fileID: 986395548}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: rabbitdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 649705e84fe1d62458f3915f63be5868, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: rabbiticon
+      value: 
+      objectReference: {fileID: 854121031}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: penguindata
+      value: 
+      objectReference: {fileID: 11400000, guid: ae2e7eaa08b2839428b6d76c4c30df35, type: 2}
+    - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
+      propertyPath: penguinicon
+      value: 
+      objectReference: {fileID: 881516721}
     - target: {fileID: 4075194947496878255, guid: 20b0b5bddaed8bd45afceef9973453ce, type: 3}
       propertyPath: scoreManager
       value: 

@@ -12,4 +12,10 @@ public class AnimalHolder : MonoBehaviour
     {
         animal.SetAnimal(defaultAnimalData);
     }
+
+    protected void ChangeAnimal(AnimalData data)
+    {
+        animal.SetAnimal(data);
+    }
 }
+
