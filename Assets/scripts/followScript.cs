@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class followScript : AnimalHolder
 {
-    public float visionRange = 5.0f; 
+    public float visionRange = 10f; 
     public float speed = 2.0f;
     public float followDuration = 3.0f;
     public float wanderRadius = 3.0f; 

@@ -6,7 +6,7 @@ public class spawnFoodScript : MonoBehaviour
 {
 
     public GameObject food;
-    public float spawnCountdown = 2f;
+    public float spawnCountdown = 10f;
     public float timer;
     // Start is called before the first frame update
     void Start()

@@ -2,21 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public TMP_Text scoreText;
     public static int chickCount;
-    public static int parrotCount;
-    // Start is called before the first frame update
-    void Start()
+    public int parrotCount;
+    
+    public void CollectFood()
     {
-        
+        chickCount++;
+        scoreText.text = "Chick: " + chickCount.ToString();
+
+
+        if(chickCount>= 10)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DecreaseScore()
     {
-        scoreText.text = "Chick:" + chickCount;
+        if(chickCount > 0)
+        {
+            chickCount++;
+            scoreText.text = "Chick:" + chickCount.ToString();
+        }
     }
 }

@@ -32,6 +32,7 @@ public class Player : AnimalHolder
             if(health == 0)
             {
                 Destroy(this.gameObject);
+
             }
         }
        

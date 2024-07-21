@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1ede53a7fa6993498f52ca25444db18, type: 3}
-  m_Name: GoatData
+  m_Name: DuckData
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: dc5b2fd54297b6c419e1a6f860cb2e9a, type: 3}
+  sprite: {fileID: 21300000, guid: f9d0422e0aea2014f84c1e4c9370b234, type: 3}
