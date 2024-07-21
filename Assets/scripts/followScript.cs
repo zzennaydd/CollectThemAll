@@ -15,13 +15,15 @@ public class followScript : AnimalHolder
     private bool isFollowing = false;
     private bool isWaiting = false;
     private Vector2 wanderTarget;
-
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         player = GameObject.FindGameObjectWithTag("player").transform;
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Wander());
+
     }
+
 
     void FixedUpdate()
     {
