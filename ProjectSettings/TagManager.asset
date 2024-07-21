@@ -7,6 +7,10 @@ TagManager:
   - enemy
   - chick
   - player
+  - parrot
+  - penguin
+  - duck
+  - rabbit
   layers:
   - Default
   - TransparentFX

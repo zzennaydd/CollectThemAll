@@ -27,29 +27,56 @@ public class Player : AnimalHolder
        
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "enemy")
         {
             health -= 1;
-            if(health <= 0)
+            if (health <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
             }
-        }
-        if(other.gameObject.tag == "chick")
-        {
-            Destroy(other.gameObject);
-            scoreManager.CollectFood();
+          
             
         }
-        if(other.gameObject.tag == "parrot")
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("chick"))
         {
+            scoreManager.chickCount++;
+            scoreManager.AdjustOtherScores("chick");
             Destroy(other.gameObject);
-            scoreManager.DecreaseScore();
         }
-       
+        else if (other.gameObject.CompareTag("parrot"))
+        {
+            scoreManager.parrotCount++;
+            scoreManager.AdjustOtherScores("parrot");
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("rabbit"))
+        {
+            scoreManager.rabbitCount++;
+            scoreManager.AdjustOtherScores("rabbit");
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("duck"))
+        {
+            scoreManager.duckCount++;
+            scoreManager.AdjustOtherScores("duck");
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("penguin"))
+        {
+            scoreManager.penguinCount++;
+            scoreManager.AdjustOtherScores("penguin");
+            Destroy(other.gameObject);
+        }
+
 
     }
 }

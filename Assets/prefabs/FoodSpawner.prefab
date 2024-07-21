@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   food: {fileID: 2209570268943714722, guid: c5b55b0682655494e9b6a63f3039f263, type: 3}
-  spawnCountdown: 2
+  spawnCountdown: 5
   timer: 0
